@@ -1,6 +1,7 @@
 config/
-data/
+datas/
+.idea/
 models/
 src/
-test
+
 requirements.txt
