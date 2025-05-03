@@ -3,5 +3,6 @@ datas/
 .idea/
 models/
 src/
+app.py
 
 requirements.txt
