@@ -132,7 +132,7 @@ class FacialRecognitionActionDetection:
 
             if len(eyes) == 0:
                 return "sleeping", 0.85
-            elif len(mouths) > 0:
+            elif len(mouths) > 2:
                 return "talking", 0.85
 
             face_image_rgb = cv2.cvtColor(face_image, cv2.COLOR_BGR2RGB)
@@ -295,7 +295,7 @@ class FacialRecognitionActionDetection:
 
         print("Starting webcam capture with high accuracy settings. Press 'q' to quit.")
 
-        cap = cv2.VideoCapture(0)
+        cap = cv2.VideoCapture(1)
 
         if not cap.isOpened():
             print("Error: Could not open webcam. Trying alternative camera index...")
@@ -304,7 +304,7 @@ class FacialRecognitionActionDetection:
                 print("Error: Could not open any camera")
                 return
 
-        cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+        cap.set(cv2.CAP_PROP_FRAME_WIDTH, 960)
         cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
 
         person_action_history = {}
