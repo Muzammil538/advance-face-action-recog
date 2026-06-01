@@ -6,3 +6,4 @@ src/
 app.py
 
 requirements.txt
+.DS_Store
